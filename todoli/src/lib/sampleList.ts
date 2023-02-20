@@ -1,1 +1,1 @@
-export const sampleList: String[] = ["Hello World!", "Work hard"];
+export const sampleList: string[] = ["Hello World!", "Work hard"];

@@ -1,14 +1,15 @@
+import { MouseEventHandler } from "react";
 import Task from "./Task"
 
 type AppPropsType = {
-    listArr: String[]
+    listArr: String[];
+    deleteHandler: MouseEventHandler;
 }
  
 export default function TaskList(props: AppPropsType) {
     return (<div>
-        <Task text={props.listArr[0]}/>
         {props.listArr.map((value, index) => {
-        return <Task key={index} text={value}/>
+        return <Task key={index} text={value} deleteHandler={props.deleteHandler} index={index}/>
         })}
         </div>)
 }
